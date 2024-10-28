@@ -1,0 +1,27 @@
+{{message}}
+<h1> View Ordered products</h1>
+<table border="1">
+
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Order date</th>
+<th>Order time</th>
+<th>Edit action</th>
+<th>Delete action</th>    
+</tr>
+
+
+<tr *ngFor="let product of products">
+<td>{{product.id}}</td>
+<td>{{product.name}}</td>
+<td>{{product.orderdate|date:'dd/MM/yy'}}</td>
+<td>{{product.ordertime}}</td>
+<td><button routerLink="/edit/{{product.id}}">Edit</button></td>
+<td><button (click)="deleteProduct(product.id)">Delete</button></td>
+</tr>
+
+
+</table>
+

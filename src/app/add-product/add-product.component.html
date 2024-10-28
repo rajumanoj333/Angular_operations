@@ -1,0 +1,23 @@
+<h1 name="h1">{{message}}</h1>
+<h1>Add Product</h1>
+<div>
+<label>ID:</label>
+<input type="number" name="id" [(ngModel)]="id">
+</div>
+<div>
+    <label>Name:</label>
+    <input type="text"  name="name" [(ngModel)]="name">
+</div>
+
+
+<div>
+    <label>Order Date:</label>
+    <input type="date" name="orderdate" [(ngModel)]="orderdate">
+</div>
+
+
+<div>
+    <label>Order time:</label>
+    <input type="time" name="ordertime" [(ngModel)]="ordertime">
+</div>
+<button name="add" (click)="addProduct()">Add product</button>
